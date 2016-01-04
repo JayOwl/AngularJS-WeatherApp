@@ -1,0 +1,21 @@
+<input type="radio" name="temperature" ng-model="tempUnit" value="C"> C
+<input type="radio" name="temperature" ng-model="tempUnit" value="F"> F
+
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    <tr ng-repeat="item in forecast | orderBy:inputOrderProp">
+        <td>{{item.cityName}}</td>
+		<td><img ng-src="http://l.yimg.com/a/i/us/we/52/{{item.code}}.gif" alt="Description" /></td>
+        <td>{{item.text}}</td>
+        <td>{{item.high}}</td>
+        <td>{{item.low}}</td>
+    </tr>
+	
+</table>
